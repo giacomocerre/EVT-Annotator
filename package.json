@@ -5,9 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc --build --clean",
-    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
-    "test:watch": "mocha -r ts-node/register --watch --watch-files src, tests/**/*.ts"
+    "build": "tsc --build --clean"
   },
   "author": "GiacomoCerretini",
   "license": "MIT",
