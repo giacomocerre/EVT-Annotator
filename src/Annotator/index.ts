@@ -1,3 +1,4 @@
-import CreateAnnotatio from "./createAnnotation";
+import createAnnotation from './createAnnotation';
+import getAnnotation from './getAnnotation';
 
-export {CreateAnnotatio}
+export { createAnnotation, getAnnotation };
