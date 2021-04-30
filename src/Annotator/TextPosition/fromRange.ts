@@ -3,7 +3,7 @@ import { TextPosition } from '../../types';
 
 const fromRange = (
   root: HTMLElement,
-  range: Range
+  range: Range,
 ): TextPosition => {
   const result = textPosition.fromRange(root, range);
   result.type = 'TextPositionSelector';

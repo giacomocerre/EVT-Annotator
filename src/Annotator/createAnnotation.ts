@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import {
-  Annotation, BodyAnnotation, RangeSelector, TargetAnnotation, TextPosition, TextQuoteSelector
+  Annotation, BodyAnnotation, RangeSelector, TargetAnnotation, TextPosition, TextQuoteSelector,
 } from '../types';
 import * as XpathSelector from './RangeSelector';
 import * as TextSelector from './TextPosition';
@@ -26,7 +26,7 @@ const createAnnotation = (
       created: new Date().toISOString(),
       via: URL,
       body: AnnotationBody,
-      target: AnnotationTarget
+      target: AnnotationTarget,
 
     };
   } else {

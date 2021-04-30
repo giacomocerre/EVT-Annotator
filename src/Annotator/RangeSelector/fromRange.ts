@@ -3,20 +3,20 @@ import { RangeSelector } from '../../types';
 
 const fromRange = (
   root: HTMLElement,
-  range: Range
+  range: Range,
 ): RangeSelector => {
   const position = xpath.fromRange(range, root);
   const result = {
     startSelector: {
       type: 'XpathSelector',
-      value: position.start
+      value: position.start,
     },
     endSelector: {
       type: 'XpathSelector',
-      value: position.end
+      value: position.end,
     },
     start: position.startOffset,
-    end: position.endOffset
+    end: position.endOffset,
 
   };
   return result;

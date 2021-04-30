@@ -4,7 +4,7 @@ import * as TextSelector from './TextPosition';
 import * as QuoteSelector from './TextQuote';
 
 const getAnnotation = (
-  anno: Annotation
+  anno: Annotation,
 ): Range => {
   let range: Range;
   const xpathRange = RangeSelector.toRange(anno);

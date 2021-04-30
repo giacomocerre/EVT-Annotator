@@ -1,7 +1,7 @@
 import { TextQuoteSelector } from '../../types';
 
 const fromRange = (
-  range: Range
+  range: Range,
 ): TextQuoteSelector => {
   const exact = range.toString();
   const regex = new RegExp(`(.{0,32})${exact.replace(/\n|\r/g, '')}(.{0,32})`);
@@ -9,7 +9,7 @@ const fromRange = (
   const suffix = range.commonAncestorContainer.textContent.replace(/\n|\r/g, '').match(regex)[2];
 
   const result = {
-    type: 'TextQuoteSelector', exact, prefix, suffix
+    type: 'TextQuoteSelector', exact, prefix, suffix,
   };
 
   return result;

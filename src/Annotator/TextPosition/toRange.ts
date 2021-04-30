@@ -3,7 +3,7 @@ import { Annotation, TextPosition } from '../../types';
 
 const toRange = (
   anno: Annotation,
-  position?: TextPosition
+  position?: TextPosition,
 ): Range => {
   const { start, end } = position || anno.target.selector[1];
   const result = textPosition.toRange(anno.target.source, { start, end });
