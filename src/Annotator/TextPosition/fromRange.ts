@@ -1,16 +1,14 @@
-import * as textPosition from "dom-anchor-text-position";
-import { TextPosition } from "../../types";
-
+import * as textPosition from 'dom-anchor-text-position';
+import { TextPosition } from '../../types';
 
 const fromRange = (
-    root: HTMLElement,
-    range: Range
-  ) => {
-    const position: TextPosition = textPosition.fromRange(root, range);
-    position.type = "TextPositionSelector";
-    const result = textPosition.fromRange(root, range);
+  root: HTMLElement,
+  range: Range
+): TextPosition => {
+  const result = textPosition.fromRange(root, range);
+  result.type = 'TextPositionSelector';
 
-    return result;
-  };
-  
-  export default fromRange; 
+  return result;
+};
+
+export default fromRange;
