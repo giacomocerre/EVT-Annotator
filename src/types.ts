@@ -1,8 +1,14 @@
 export type RangeSelector = {
-  end: string;
-  endOffset: number;
-  start: string;
-  startOffset: number;
+  startSelector: {
+    type: string;
+    value: string;
+  };
+  endSelector: {
+    type: string;
+    value: string;
+  }
+  start: number;
+  end: number;
 }
 
 export type TextPosition = {
@@ -18,16 +24,6 @@ export type TextQuoteSelector = {
   suffix?: string;
 }
 
-export type Annotation = {
-  "@context": string;
-  id: string;
-  type: string;
-  created: string;
-  via:string;
-  body: BodyAnnotation;
-  target: TargetAnnotation;
-}
-
 export type BodyAnnotation = {
   type: string;
   value: string;
@@ -38,4 +34,14 @@ export type TargetAnnotation = {
   source: HTMLElement;
   type: string;
   selector:[RangeSelector, TextPosition, TextQuoteSelector]
+}
+
+export type Annotation = {
+  '@context': string;
+  id: string;
+  type: string;
+  created: string;
+  via:string;
+  body: BodyAnnotation;
+  target: TargetAnnotation;
 }
