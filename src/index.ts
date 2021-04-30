@@ -1,7 +1,5 @@
-// Public API
-export * as range from './Annotator/RangeSelector';
-export * as text from './Annotator/TextPosition';
-export * as quote from './Annotator/TextQuote';
+// Annotator Public API
+export * as annotator from './Annotator';
 
 // Types
 export * from './types';
