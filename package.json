@@ -1,11 +1,13 @@
 {
-  "name": "evt-anchoring",
+  "name": "evt-text-annotator",
   "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc --build --clean"
+    "build": "npm run lint & tsc --build",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
   },
   "author": "GiacomoCerretini",
   "license": "MIT",
@@ -16,27 +18,18 @@
     "xpath-range": "^1.1.1"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.13",
-    "@types/jsdom": "^16.2.4",
-    "@types/mocha": "^8.0.3",
     "@types/typescript": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
-    "chai": "^4.2.0",
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
-    "husky": "^4.3.0",
-    "jsdom": "^16.4.0",
     "lint-staged": "^10.4.0",
-    "mocha": "^8.1.3",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "publishConfig": {
+    "access": "public"
   },
   "lint-staged": {
     "*.ts": [
